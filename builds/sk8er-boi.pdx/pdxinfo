@@ -4,3 +4,5 @@ description=fun skate game for the playdate
 bundleID=com.nono.sk8er-boi
 version=0.1.0
 buildNumber=1
+pdxversion=20703
+buildtime=802118425

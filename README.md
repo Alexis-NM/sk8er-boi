@@ -22,6 +22,12 @@ _sk8er-boi_ is a skateboarding game in development for the Playdate, featuring p
 
 ---
 
+## Screenshot
+
+![sk8er-boi Gameplay GIF](source/assets/screenshot.gif)
+
+---
+
 ## Development
 
 - **Languages**:
