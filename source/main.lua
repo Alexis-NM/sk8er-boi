@@ -1,20 +1,31 @@
 import "CoreLibs/graphics"
 import "CoreLibs/sprites"
-import "CoreLibs/ui"
-local gfx <const> = playdate.graphics
+local pd  <const> = playdate
+local gfx <const> = pd.graphics
+
+local Splash = import("splash")
+Splash:init("assets/images/splash", 45.0)
 
 local player = import("player")
-
-if not player or type(player.init) ~= "function" then
-    error("Unable to import Player module or missing init() method")
-end
-
 player:init()
 
-function playdate.update()
+local MusicManager = import("music_manager")
+local musicMgr = MusicManager
+local musicStarted = false
+
+
+function pd.update()
     gfx.clear()
-    if type(player.update) == "function" then
-        player:update()
+
+    if not Splash:update() then
+        return
     end
+
+    if not musicStarted then
+        musicMgr:init("assets/sounds/music", "assets/sounds/music_2")
+        musicStarted = true
+    end
+
+    player:update()
     gfx.sprite.update()
 end
