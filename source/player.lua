@@ -8,13 +8,13 @@ local Player = {}
 
 function Player:init()
     -- 1) Chargement des images
-    self.imageNeutral   = gfx.image.new("assets/sprites/skater")          or error("failed to load skater.png")
-    self.imageRun2      = gfx.image.new("assets/sprites/skater_run_2")     or error("failed to load skater_run_2.png")
-    self.imageJump1     = gfx.image.new("assets/sprites/skater_jump")      or error("failed to load skater_jump.png")
-    self.imageJump2     = gfx.image.new("assets/sprites/skater_jump_2")    or error("failed to load skater_jump_2.png")
-    self.imageJump3     = gfx.image.new("assets/sprites/skater_jump_3")    or error("failed to load skater_jump_3.png")
-    self.imageDown      = gfx.image.new("assets/sprites/skater_down")      or error("failed to load skater_down.png")
-    self.imageUp        = gfx.image.new("assets/sprites/skater_up")        or error("failed to load skater_up.png")
+    self.imageNeutral   = gfx.image.new("assets/sprites/skater")
+    self.imageRun2      = gfx.image.new("assets/sprites/skater_run_2")
+    self.imageJump1     = gfx.image.new("assets/sprites/skater_jump")
+    self.imageJump2     = gfx.image.new("assets/sprites/skater_jump_2")
+    self.imageJump3     = gfx.image.new("assets/sprites/skater_jump_3")
+    self.imageDown      = gfx.image.new("assets/sprites/skater_down")
+    self.imageUp        = gfx.image.new("assets/sprites/skater_up")
 
     -- 2) Tableau de l’animation de saut + offsets Y
     self.jumpImages = {
